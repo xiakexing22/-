@@ -1,0 +1,38 @@
+print("Welcome to caq背单词")
+Language = input("请选择你要背单词的语言 (目前可以背Italian和French)： ")
+
+Italian = ["casa", "paese", "mondo", "città", "strada", "piazza", "sala", "ufficio", "zona", "isola"]
+Italian_translated = ["house", "town", "world", "city", "road", "square", "room", "office", "zone", "island"]
+
+French = ["obtenir", "fabriquer", "montrer", "penser", "déménagement", "manière", "regarder", "aucun"]
+French_translated = ["get", "make", "show", "think", "move", "way", "look", "no"]
+
+def letter(language):
+    count = 1
+    not_remember = []
+    if language.upper() == "ITALIAN":
+        while count < len(Italian):
+            print("Do you remember " + Italian[count])
+            remember_y = input("Yes(y) or No(n): ")
+            if remember_y == "y":
+                count += 1
+            else:
+                not_remember.append(Italian[count])
+                print("This means " + Italian_translated[count - 1] + " in English.")
+                count += 1
+    if language.upper() == "FRENCH":
+        while count < len(French):
+            print("Do you remember " + French[count])
+            remember_y = input("Yes(y) or No(n): ")
+            if remember_y == "y":
+                count += 1
+            else:
+                not_remember.append(French[count])
+                print("This means " + French_translated[count - 1] + " in English.")
+                count += 1
+
+    print("你已经背完所有 " + Language + " 单词")
+    print("你还需要加强复习的单词包括： ")
+    print(not_remember)
+
+letter(Language)
