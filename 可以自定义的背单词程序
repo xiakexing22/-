@@ -1,4 +1,4 @@
-print("Welcome to caq背单词")
+print("Welcome to 嘿嘿背单词")
 Language = input("请选择你要背单词的语言 (目前可以背Italian和French)： ")
 
 Italian = ["casa", "paese", "mondo", "città", "strada", "piazza", "sala", "ufficio", "zona", "isola"]
